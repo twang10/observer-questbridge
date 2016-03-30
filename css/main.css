@@ -160,8 +160,6 @@ a:hover, a:focus {
 	top: 0;
 	left: 0;
 	display: block;
-	min-width: 100%;
-	min-height: 100%;
 	opacity: .8;
 }
 
@@ -434,10 +432,14 @@ button.trigger span::before {
 @media screen and (min-width: 47em) {
 	.bg-img img {
 		width: 100%;
+		min-height: 100%;
 	}
 }
 @media screen and (max-width: 47em) {
-
+	.bg-img img {
+		min-width: 100%;
+		height: 100%;
+	}
 	.title, .content {
 		font-size: 70%;
 	}
@@ -478,9 +480,6 @@ button.trigger span::before {
 }
 
 @media screen and (max-width: 27em) {
-	.bg-img img {
-		min-width: 100%;
-	}
 
 	.title, .content {
 		font-size: 50%;
