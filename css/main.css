@@ -51,7 +51,8 @@ a {
 }
 
 a:hover, a:focus {
-	color: #69606b;
+	color: white;
+	background-color: #cf4a5c;
 }
 
 
@@ -80,6 +81,7 @@ a:hover, a:focus {
 
 .top a:hover {
 	color: #cf4a5c;
+	background-color: white;
 }
 
 .top span.right {
@@ -158,7 +160,7 @@ a:hover, a:focus {
 	top: 0;
 	left: 0;
 	display: block;
-	width: 100%;
+	min-width: 100%;
 	min-height: 100%;
 	opacity: .8;
 }
@@ -428,7 +430,14 @@ button.trigger span::before {
 
 
 /* Media Queries */
+
+@media screen and (min-width: 47em) {
+	.bg-img img {
+		width: 100%;
+	}
+}
 @media screen and (max-width: 47em) {
+
 	.title, .content {
 		font-size: 70%;
 	}
@@ -469,18 +478,8 @@ button.trigger span::before {
 }
 
 @media screen and (max-width: 27em) {
-	.intro-effect-jam3 .content {
-		padding: 0 2em 5em;
-	}
-
-	.intro-effect-grid .grid li h2 {
-		display: none;
-	}
-
-	.intro-effect-push .header .title {
-		top: 60px;
-		-webkit-transform: translateX(-50%);
-		transform: translateX(-50%);
+	.bg-img img {
+		min-width: 100%;
 	}
 
 	.title, .content {
