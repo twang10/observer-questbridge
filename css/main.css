@@ -13,6 +13,125 @@ html, body, .container, .header {
 	height: 100%;
 }
 
+@font-face {
+	font-weight: normal;
+	font-style: normal;
+	font-family: 'codropsicons';
+	src:url('../fonts/codropsicons/codropsicons.eot');
+	src:url('../fonts/codropsicons/codropsicons.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/codropsicons/codropsicons.woff') format('woff'),
+		url('../fonts/codropsicons/codropsicons.ttf') format('truetype'),
+		url('../fonts/codropsicons/codropsicons.svg#codropsicons') format('svg');
+}
+
+*, *:after, *:before { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; }
+.clearfix:before, .clearfix:after { display: table; content: ''; }
+.clearfix:after { clear: both; }
+
+
+body {
+	background: #fff;
+	background-image: url('../img/maze.png');
+	color: black;
+	font-weight: 400;
+	font-size: 22px;
+	line-height: 1.5;
+	font-family: 'Inconsolata', Arial, sans-serif;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	overflow-x: hidden;
+}
+
+
+
+a {
+	outline: none;
+	color: #cf4a5c;
+	text-decoration: none;
+}
+
+a:hover, a:focus {
+	color: #69606b;
+}
+
+
+
+/* To Navigation Style */
+.top {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	text-transform: uppercase;
+	font-weight: 800;
+	font-size: 0.6em;
+	padding: 0 32px;
+	letter-spacing: 1px;
+	z-index: 10000;
+}
+
+.top a {
+	display: inline-block;
+	color: #fff;
+	text-decoration: none;
+	-webkit-transform: translateY(20px);
+	transform: translateY(20px);
+}
+
+.top a:hover {
+	color: #cf4a5c;
+}
+
+.top span.right {
+	float: right;
+}
+
+.top span.right a {
+	display: block;
+	float: left;
+}
+
+.icon:before {
+	text-transform: none;
+	font-weight: normal;
+	font-style: normal;
+	font-variant: normal;
+	font-family: 'codropsicons';
+	text-align: center;
+	speak: none;
+	margin: 0 0.55em 0 0;
+	-webkit-font-smoothing: antialiased;
+}
+
+.icon-drop:before {
+	content: "\e001";
+}
+
+.icon-prev:before {
+	content: "\e004";
+}
+
+
+
+.related {
+	padding: 3em 0;
+	text-align: center;
+	font-size: 1.5em;
+	position: relative;
+}
+
+@media screen and (max-width: 40em) {
+
+	.icon span {
+		display: none;
+	}
+
+	.related {
+		font-size: 80%;
+	}
+
+}
+
 /* Header */
 .header {
 	position: relative;
@@ -312,10 +431,6 @@ button.trigger span::before {
 @media screen and (max-width: 47em) {
 	.title, .content {
 		font-size: 70%;
-	}
-
-	.codrops-demos a {
-		font-size: 80%;
 	}
 
 	.intro-effect-side .title {
