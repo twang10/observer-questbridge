@@ -437,7 +437,7 @@ button.trigger span::before {
 }
 @media screen and (max-width: 47em) {
 	article {
-		font-size: 1em!important;
+		font-size: .75em!important;
 	}
 
 	blockquote {
